@@ -1,0 +1,40 @@
+{
+  "env": {
+    "es2020": true,
+    "node": true,
+    "jest": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "import", "jest"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
+    "plugin:jest/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "project": "tsconfig.json"
+  },
+  "rules": {
+    "import/no-unresolved": "error",
+    "no-var": "error",
+    "no-param-reassign": "error",
+    "prefer-const": "error",
+    "@typescript-eslint/explicit-function-return-type": "error",
+    "@typescript-eslint/prefer-readonly": "error",
+    "@typescript-eslint/switch-exhaustiveness-check": "error"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {
+        "alwaysTryTypes": true
+      }
+    }
+  }
+}
